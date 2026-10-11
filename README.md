@@ -64,17 +64,6 @@ The headline, subtitle and highlight list animate in on scroll over the M3 artwo
 | **Highlights** | **Footer** |
 | ![Highlights](docs/screenshots/highlights.png) | ![Footer](docs/screenshots/footer.png) |
 
-## Getting Started
-
-```bash
-git clone git@github.com:phoenix2610/react-apple.git
-cd react-apple
-npm install
-npm run dev
-```
-
-Then open http://localhost:5173.
-
 ## Scripts
 
 | Command | Description |

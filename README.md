@@ -1,16 +1,85 @@
-# React + Vite
+# MacBook Pro M3 Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An Apple-style product landing page for the MacBook Pro M3, built with React, Three.js and GSAP. It features an interactive 3D product viewer, scroll-driven animations, and video-textured models.
 
-Currently, two official plugins are available:
+![Hero](docs/screenshots/hero.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## React Compiler
+- [React 19](https://react.dev) + [Vite 7](https://vite.dev)
+- [Tailwind CSS 4](https://tailwindcss.com)
+- [GSAP](https://gsap.com) with ScrollTrigger
+- [React Three Fiber](https://r3f.docs.pmnd.rs) + [Drei](https://drei.docs.pmnd.rs)
+- [Zustand](https://zustand.docs.pmnd.rs) for shared model state
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sections
 
-## Expanding the ESLint configuration
+### Hero
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Autoplaying intro video with the product name and a buy call to action.
+
+![Hero](docs/screenshots/hero.png)
+
+### Take a Closer Look
+
+An interactive 3D MacBook. Drag to orbit the model, switch between Silver and Space Black, and toggle the 14" and 16" sizes.
+
+![Product viewer](docs/gifs/productviewer.gif)
+
+### Showcase
+
+A pinned, scroll-scrubbed section where the M4 mask expands to reveal a full-screen video.
+
+![Showcase](docs/gifs/showcase.gif)
+
+### Performance
+
+Images fly in and out around the "Extreme Performance" heading as you scroll, in both directions.
+
+![Performance](docs/gifs/performance.gif)
+
+### Powerful Features
+
+The MacBook rotates a full turn as you scroll, with its screen texture and the feature callouts changing at each step over an interactive floating-lines background.
+
+![Features](docs/gifs/features.gif)
+
+### Highlights
+
+The headline, subtitle and highlight list animate in on scroll over the M3 artwork.
+
+![Highlights](docs/gifs/highlights.gif)
+
+### Footer
+
+![Footer](docs/screenshots/footer.png)
+
+## Screenshots
+
+| Product Viewer | Showcase |
+| --- | --- |
+| ![Product viewer](docs/screenshots/productviewer.png) | ![Showcase](docs/screenshots/showcase.png) |
+| **Performance** | **Features** |
+| ![Performance](docs/screenshots/performance.png) | ![Features](docs/screenshots/features.png) |
+| **Highlights** | **Footer** |
+| ![Highlights](docs/screenshots/highlights.png) | ![Footer](docs/screenshots/footer.png) |
+
+## Getting Started
+
+```bash
+git clone git@github.com:phoenix2610/react-apple.git
+cd react-apple
+npm install
+npm run dev
+```
+
+Then open http://localhost:5173.
+
+## Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Build for production into `dist/` |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint |

@@ -1,28 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import GradientText from './GradientText';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedList = ({
     items,
     onItemSelect = () => { },
-    showGradients = true,
     enableArrowNavigation = false,
     displayScrollbar = false,
     className = ""
 }) => {
     const listRef = useRef(null);
     const [selectedIndex, setSelectedIndex] = useState(-1);
-
-    const gradientColors = [
-        ["#60a5fa", "#a855f7", "#ec4899", "#60a5fa"],
-        ["#facc15", "#f97316", "#ef4444", "#facc15"],
-        ["#4ade80", "#14b8a6", "#3b82f6", "#4ade80"],
-        ["#f472b6", "#c084fc", "#60a5fa", "#f472b6"],
-        ["#fb923c", "#fbbf24", "#a3e635", "#fb923c"]
-    ];
 
     useEffect(() => {
         const listItems = listRef.current?.querySelectorAll('.animated-list-item');
@@ -88,20 +78,9 @@ const AnimatedList = ({
                     role="button"
                     tabIndex={0}
                 >
-                    {showGradients ? (
-                        <GradientText
-                            colors={gradientColors[index % gradientColors.length]}
-                            animationSpeed={3}
-                            showBorder={false}
-                            className="text-3xl md:text-4xl lg:text-5xl font-bold"
-                        >
-                            {item}
-                        </GradientText>
-                    ) : (
-                        <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                            {item}
-                        </span>
-                    )}
+                    <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f5f5f7]">
+                        {item}
+                    </span>
                 </div>
             ))}
         </div>

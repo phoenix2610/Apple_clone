@@ -3,7 +3,7 @@ const Hero = () => {
         <section id="hero">
             <div>
                 <h1>MacBook Pro</h1>
-                <p>With the M2 chip, the best chip ever in a Mac notebook.</p>
+                <p>With the M3 chip, the best chip ever in a Mac notebook.</p>
                 <img src="/title.png" alt="Macbook title" />
             </div>
             <video src="/videos/hero.mp4" autoPlay muted playsInline />

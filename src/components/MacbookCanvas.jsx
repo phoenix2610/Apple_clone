@@ -61,8 +61,6 @@ function MacbookWithTexture({ Model, scale, rotation, texture }) {
 
                     // The screen uses this specific material
                     if (materialName === 'zhGRTuGrQoJflBD') {
-                        console.log('✅ Applying texture to screen:', materialName);
-
                         // Clone material to avoid affecting other instances
                         child.material = child.material.clone();
                         child.material.map = videoTexture;

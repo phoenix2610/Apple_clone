@@ -1,80 +1,98 @@
 import React from 'react';
 
+const columns = [
+    {
+        title: 'Shop and Learn',
+        links: ['Store', 'Mac', 'iPad', 'iPhone', 'Watch', 'Vision', 'AirPods', 'TV & Home'],
+    },
+    {
+        title: 'Account',
+        links: ['Manage Your Apple Account', 'Apple Store Account', 'iCloud.com'],
+    },
+    {
+        title: 'Entertainment',
+        links: ['Apple One', 'Apple TV+', 'Apple Music', 'Apple Arcade', 'Apple Fitness+'],
+    },
+    {
+        title: 'Apple Values',
+        links: ['Accessibility', 'Education', 'Environment', 'Inclusion and Diversity', 'Privacy'],
+    },
+    {
+        title: 'About Apple',
+        links: ['Newsroom', 'Apple Leadership', 'Career Opportunities', 'Investors', 'Ethics & Compliance'],
+    },
+];
+
+const legalLinks = ['Privacy Policy', 'Terms of Use', 'Sales and Refunds', 'Legal', 'Site Map'];
+
 const Footers = () => {
     return (
-        <footer className="footer-section bg-neutral-900 text-gray-400 py-10 text-xs">
-            <div className="container mx-auto px-4">
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-8 border-b border-gray-700 pb-8">
+        <footer className="bg-black text-[#86868b] text-xs border-t border-white/10">
+            <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 py-12 border-b border-white/10">
                     <div>
-                        <h3 className="font-semibold text-gray-100 mb-2">Shop and Learn</h3>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="hover:underline">Store</a></li>
-                            <li><a href="#" className="hover:underline">Mac</a></li>
-                            <li><a href="#" className="hover:underline">iPad</a></li>
-                            <li><a href="#" className="hover:underline">iPhone</a></li>
-                            <li><a href="#" className="hover:underline">Watch</a></li>
-                            <li><a href="#" className="hover:underline">Vision</a></li>
-                            <li><a href="#" className="hover:underline">AirPods</a></li>
-                            <li><a href="#" className="hover:underline">TV & Home</a></li>
-                        </ul>
+                        <p className="text-2xl md:text-3xl font-semibold tracking-tight text-[#f5f5f7]">
+                            MacBook Pro M3
+                        </p>
+                        <p className="mt-2 text-sm text-[#86868b]">
+                            Mind-blowing. Head-turning. Built for everything you do.
+                        </p>
                     </div>
-                    <div>
-                        <h3 className="font-semibold text-gray-100 mb-2">Account</h3>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="hover:underline">Manage Your Apple ID</a></li>
-                            <li><a href="#" className="hover:underline">Apple Store Account</a></li>
-                            <li><a href="#" className="hover:underline">iCloud.com</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 className="font-semibold text-gray-100 mb-2">Entertainment</h3>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="hover:underline">Apple One</a></li>
-                            <li><a href="#" className="hover:underline">Apple TV+</a></li>
-                            <li><a href="#" className="hover:underline">Apple Music</a></li>
-                            <li><a href="#" className="hover:underline">Apple Arcade</a></li>
-                            <li><a href="#" className="hover:underline">Apple Fitness+</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 className="font-semibold text-gray-100 mb-2">Apple Values</h3>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="hover:underline">Accessibility</a></li>
-                            <li><a href="#" className="hover:underline">Education</a></li>
-                            <li><a href="#" className="hover:underline">Environment</a></li>
-                            <li><a href="#" className="hover:underline">Inclusion and Diversity</a></li>
-                            <li><a href="#" className="hover:underline">Privacy</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 className="font-semibold text-gray-100 mb-2">About Apple</h3>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="hover:underline">Newsroom</a></li>
-                            <li><a href="#" className="hover:underline">Apple Leadership</a></li>
-                            <li><a href="#" className="hover:underline">Career Opportunities</a></li>
-                            <li><a href="#" className="hover:underline">Investors</a></li>
-                            <li><a href="#" className="hover:underline">Ethics & Compliance</a></li>
-                        </ul>
+                    <div className="flex items-center gap-5">
+                        <a
+                            href="#"
+                            className="rounded-full bg-[#0071e3] px-5 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#0077ed]"
+                        >
+                            Buy
+                        </a>
+                        <a
+                            href="#"
+                            className="text-sm text-[#2997ff] transition-colors duration-200 hover:underline"
+                        >
+                            Compare models &rsaquo;
+                        </a>
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-between items-center pt-4">
-                    <div className="mb-4 md:mb-0">
-                        <p>Copyright &copy; 2025 Apple Inc. All rights reserved.</p>
-                    </div>
-                    <div className="flex space-x-4">
-                        <a href="#" className="hover:underline">Privacy Policy</a>
-                        <span className="border-r border-gray-600"></span>
-                        <a href="#" className="hover:underline">Terms of Use</a>
-                        <span className="border-r border-gray-600"></span>
-                        <a href="#" className="hover:underline">Sales and Refunds</a>
-                        <span className="border-r border-gray-600"></span>
-                        <a href="#" className="hover:underline">Legal</a>
-                        <span className="border-r border-gray-600"></span>
-                        <a href="#" className="hover:underline">Site Map</a>
-                    </div>
-                    <div className="mt-4 md:mt-0">
-                        <a href="#" className="hover:underline">United States</a>
+                <nav className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-10 py-10 border-b border-white/10">
+                    {columns.map((column) => (
+                        <div key={column.title}>
+                            <h3 className="mb-3 font-semibold text-[#e8e8ed]">{column.title}</h3>
+                            <ul className="space-y-2.5">
+                                {column.links.map((link) => (
+                                    <li key={link}>
+                                        <a href="#" className="transition-colors duration-200 hover:text-[#f5f5f7]">
+                                            {link}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </nav>
+
+                <div className="py-6 space-y-4">
+                    <p>
+                        More ways to shop: <a href="#" className="text-[#2997ff] hover:underline">Find an Apple Store</a> or{' '}
+                        <a href="#" className="text-[#2997ff] hover:underline">other retailer</a> near you.
+                    </p>
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 pt-4 border-t border-white/10">
+                        <p>Copyright &copy; {new Date().getFullYear()} Apple Inc. All rights reserved.</p>
+                        <ul className="flex flex-wrap items-center gap-x-4 gap-y-2 lg:gap-x-0 lg:flex-1 lg:ml-8">
+                            {legalLinks.map((link, index) => (
+                                <li
+                                    key={link}
+                                    className={index > 0 ? 'lg:border-l lg:border-white/20 lg:pl-3 lg:ml-3' : ''}
+                                >
+                                    <a href="#" className="transition-colors duration-200 hover:text-[#f5f5f7]">
+                                        {link}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                        <a href="#" className="transition-colors duration-200 hover:text-[#f5f5f7]">
+                            United States
+                        </a>
                     </div>
                 </div>
             </div>

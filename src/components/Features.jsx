@@ -3,7 +3,6 @@ import MacbookCanvas from './MacbookCanvas';
 import useMacbookStore from './store';
 import { features } from './constants/index.js';
 import FloatingLines from './FloatingLines';
-import GradientText from './GradientText';
 
 const Features = () => {
     const sectionRef = useRef(null);
@@ -57,7 +56,7 @@ const Features = () => {
     const rotation = [0, rotationY, 0];
 
     return (
-        <section ref={sectionRef} className="min-h-[150vh] relative bg-gradient-to-b from-black to-[#1a1a1a] p-0 overflow-hidden">
+        <section ref={sectionRef} className="min-h-[150vh] relative bg-gradient-to-b from-black to-[#1a1a1a] p-0 overflow-clip">
             {/* FloatingLines Background - Bottom Centered */}
             <div style={{
                 position: 'absolute',
@@ -72,7 +71,7 @@ const Features = () => {
                 paddingBottom: '50px' // Add some padding from bottom
             }}>
                 <FloatingLines
-                    linesGradient={['#8B5CF6', '#A78BFA', '#C4B5FD', '#DDD6FE']}
+                    linesGradient={['#2c2c2e', '#3a3a3c', '#48484a', '#636366']}
                     enabledWaves={['top', 'middle', 'bottom']}
                     lineCount={[8, 12, 10]}
                     lineDistance={[6, 5, 7]}
@@ -91,15 +90,14 @@ const Features = () => {
             </div>
 
             {/* Content - Above FloatingLines */}
-            <div className="sticky top-0 h-screen w-full flex flex-col justify-center items-center overflow-hidden" style={{ position: 'relative', zIndex: 1 }}>
-                <div className="absolute top-10 text-center z-20 w-full">
+            <div className="sticky top-0 h-screen w-full flex flex-col justify-center items-center overflow-hidden" style={{ zIndex: 1 }}>
+                <div className="absolute top-20 text-center z-20 w-full">
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">Powerful Features</h2>
-                    <p className="text-xl text-gray-400">Discover what makes this MacBook exceptional</p>
+                    <p className="text-xl text-[#86868b]">Discover what makes this MacBook exceptional</p>
                 </div>
 
                 <div className="w-full h-[60vh] flex items-center justify-center max-w-[1600px] mx-auto relative">
 
-                    {/* Render ALL features with gradient text */}
                     {features.map((feature, index) => (
                         <div
                             key={feature.id}
@@ -113,22 +111,12 @@ const Features = () => {
                                 alt={feature.title}
                                 className="w-12 h-12 object-contain"
                             />
-                            <GradientText
-                                colors={['#A78BFA', '#DDD6FE', '#C4B5FD', '#8B5CF6', '#A78BFA']} // Start and end with same color for smooth loop
-                                animationSpeed={3}
-                                showBorder={false}
-                                className="text-2xl font-bold"
-                            >
+                            <h3 className="text-2xl font-bold text-[#f5f5f7]">
                                 {feature.title}
-                            </GradientText>
-                            <GradientText
-                                colors={['#E9D5FF', '#F3E8FF', '#DDD6FE', '#E9D5FF']} // Start and end with same color
-                                animationSpeed={5}
-                                showBorder={false}
-                                className="text-lg leading-relaxed"
-                            >
+                            </h3>
+                            <p className="text-lg leading-relaxed text-[#86868b]">
                                 {feature.description}
-                            </GradientText>
+                            </p>
                         </div>
                     ))}
 

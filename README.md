@@ -63,12 +63,3 @@ The headline, subtitle and highlight list animate in on scroll over the M3 artwo
 | ![Performance](docs/screenshots/performance.png) | ![Features](docs/screenshots/features.png) |
 | **Highlights** | **Footer** |
 | ![Highlights](docs/screenshots/highlights.png) | ![Footer](docs/screenshots/footer.png) |
-
-## Scripts
-
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the development server |
-| `npm run build` | Build for production into `dist/` |
-| `npm run preview` | Preview the production build |
-| `npm run lint` | Run ESLint |
